@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación de Recetas</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="manifest" href="manifest.json">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="contenedorbusqueda container mt-5 border border-white rounded p-5">
+        <h1 class="text-center pb-3">Aplicación de Recetas</h1>
+        <p class="">
+            ¡Bienvenido! Aquí podrás buscar recetas deliciosas ingresando algun ingrediente en inglés. La app te mostrará una variedad de opciones basadas en los ingredientes que busques. Además, si estás offline, podrás seguir accediendo a tus recetas favoritas que hayas agregado previamente. ¡Disfruta de cocinar con nosotros!
+        </p>
+        <div class="input-group">
+            <input type="text" id="busqueda" class="form-control" placeholder="Buscar recetas por ingredientes en inglés...">
+            <div>
+                <button id="buscar" class="btn btn-success">Buscar</button>
+            </div>
+        </div>
+        <div id="lista-recetas" class="row mt-3"></div>
+    </div>
+
+    <div class="container mt-5">
+        <h2 class="fav text-center pb-3 text-success">Recetas Favoritas</h2>
+        <div id="recetas-favoritas" class="row"></div>
+    </div>
+
+    <div class="text-center mt-3">
+        <button id="installButton" class="btn btn-primary">Instalar Aplicación</button>
+    </div>
+
+    <script src="pouchdb-9.0.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+            .then(reg => console.log('Service Worker registrado', reg))
+            .catch(err => console.error('Error al registrar Service Worker', err));
+        }
+    </script>
+</body>
+</html>

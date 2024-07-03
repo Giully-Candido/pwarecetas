@@ -1,0 +1,16 @@
+{
+    "name": "Aplicación de Recetas",
+    "short_name": "Recetas",
+    "description": "Una aplicación para buscar y guardar recetas.",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#007bff",
+    "icons": [
+        {
+            "src": "Icono.png",
+            "sizes": "200x200",
+            "type": "image/png"
+        }
+    ]
+}

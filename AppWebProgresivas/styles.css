@@ -1,0 +1,35 @@
+body {
+    background-color: #ffffff;
+}
+h1{
+    color: #004719;
+}
+
+.receta-card {
+    margin-bottom: 20px;
+}
+.contenedorbusqueda{
+    background-color: #b1c592;
+}
+
+/* Small (≥576px) */
+@media (min-width: 576px) {
+    .contenedorbusqueda{
+        width: 98%;
+    }
+}
+
+/* Medium (≥768px) */
+@media (min-width: 768px) {
+    .contenedorbusqueda{
+        width: 80%;
+    }
+}
+
+/* Large (≥992px) */
+@media (min-width: 992px) {
+    .contenedorbusqueda{
+        width: 50%;
+    }
+   
+}
